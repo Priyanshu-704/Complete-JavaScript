@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Events Demo</title>
+  </head>
+  <body>
+    <h1>JavaScript Events Demo</h1>
+
+    <!-- Mouse Events -->
+    <button id="click-btn">Click Me</button>
+    <button id="dblclick-btn">Double Click Me</button>
+    <div
+      id="hover-box"
+      style="border: 1px solid black; width: 200px; height: 100px"
+    >
+      Hover over me
+    </div>
+    <p id="mouse-events-msg"></p>
+
+    <!-- Keyboard Events -->
+    <input type="text" id="keyboard-input" placeholder="Type something..." />
+    <p id="keyboard-events-msg"></p>
+
+    <!-- Form Events -->
+    <form id="demo-form">
+      <input type="text" id="form-input" placeholder="Enter your name" />
+      <button type="submit">Submit</button>
+    </form>
+    <p id="form-events-msg"></p>
+
+    <!-- Window Events -->
+    <p id="resize-msg">Resize the window to see the event.</p>
+
+    <!-- Clipboard Events -->
+    <textarea id="clipboard-area" rows="3" cols="30">
+Try copying or pasting here.</textarea
+    >
+    <p id="clipboard-msg"></p>
+
+    <script>
+      // Mouse Events
+      const clickBtn = document.getElementById("click-btn");
+      const dblClickBtn = document.getElementById("dblclick-btn");
+      const hoverBox = document.getElementById("hover-box");
+      const mouseEventsMsg = document.getElementById("mouse-events-msg");
+
+      clickBtn.addEventListener("click", () => {
+        mouseEventsMsg.textContent = "You clicked the button!";
+      });
+
+      dblClickBtn.addEventListener("dblclick", () => {
+        mouseEventsMsg.textContent = "You double-clicked the button!";
+      });
+
+      hoverBox.addEventListener("mouseover", () => {
+        mouseEventsMsg.textContent = "Mouse entered the box!";
+      });
+
+      hoverBox.addEventListener("mouseout", () => {
+        mouseEventsMsg.textContent = "Mouse left the box!";
+      });
+
+      // Keyboard Events
+      const keyboardInput = document.getElementById("keyboard-input");
+      const keyboardEventsMsg = document.getElementById("keyboard-events-msg");
+
+      keyboardInput.addEventListener("keydown", (event) => {
+        keyboardEventsMsg.textContent = `Keydown: ${event.key}`;
+      });
+
+      keyboardInput.addEventListener("keyup", (event) => {
+        keyboardEventsMsg.textContent = `Keyup: ${event.key}`;
+      });
+
+      // Form Events
+      const demoForm = document.getElementById("demo-form");
+      const formInput = document.getElementById("form-input");
+      const formEventsMsg = document.getElementById("form-events-msg");
+
+      demoForm.addEventListener("submit", (event) => {
+        event.preventDefault(); // Prevent the form from reloading the page
+        formEventsMsg.textContent = `Form submitted with name: ${formInput.value}`;
+      });
+
+      formInput.addEventListener("focus", () => {
+        formEventsMsg.textContent = "Input field focused!";
+      });
+
+      formInput.addEventListener("blur", () => {
+        formEventsMsg.textContent = "Input field lost focus!";
+      });
+
+      // Window Events
+      const resizeMsg = document.getElementById("resize-msg");
+      window.addEventListener("resize", () => {
+        resizeMsg.textContent = `Window resized to ${window.innerWidth}x${window.innerHeight}`;
+      });
+
+      // Clipboard Events
+      const clipboardArea = document.getElementById("clipboard-area");
+      const clipboardMsg = document.getElementById("clipboard-msg");
+
+      clipboardArea.addEventListener("copy", () => {
+        clipboardMsg.textContent = "Content copied!";
+      });
+
+      clipboardArea.addEventListener("paste", () => {
+        clipboardMsg.textContent = "Content pasted!";
+      });
+    </script>
+  </body>
+</html>

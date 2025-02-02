@@ -1,0 +1,11 @@
+Functions in JavaScript are first-class citizens; they can be assigned to variables.
+
+Functions defined without a name, often assigned to a variable.
+
+Anonymous functions can be properties in objects.
+
+can be passed as arguments to other functions.
+
+Invoked using () after the function name or variable.
+
+console,log(myFunction); and typeof myFunction will both indicate it's a function." so we can say function is the data type."

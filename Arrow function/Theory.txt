@@ -1,0 +1,16 @@
+An arrow function is a concise syntax for writing functions in JavaScript, introduced in ES6 (ECMAScript 2015).
+
+In the arrow function you need not to used "function" keyword.
+
+It allows for shorter and more readable code, especially for small functions.
+
+Syntax : -
+  const functionName = (parameters) => { 
+    // function body 
+};
+
+If the function has a single parameter, parentheses can be omitted
+
+For functions with no parameters, use empty parentheses
+
+If the function body consists of a single expression, you can omit the curly braces and the return keyword

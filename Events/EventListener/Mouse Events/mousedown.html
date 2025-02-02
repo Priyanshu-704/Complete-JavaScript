@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mouse down event</title>
+  </head>
+  <body>
+    <div
+      id="mousedown-box"
+      style="width: 200px; height: 100px; background-color: lightblue"    >
+      Press Mouse Here
+    </div>
+    <p id="mousedown-msg"></p>
+
+    <script>
+      const mouseDownBox = document.getElementById("mousedown-box");
+      const mouseDownMsg = document.getElementById("mousedown-msg");
+      mouseDownBox.addEventListener("mousedown", () => {
+        mouseDownMsg.textContent = "Mouse button pressed!";
+      });
+    </script>
+  </body>
+</html>

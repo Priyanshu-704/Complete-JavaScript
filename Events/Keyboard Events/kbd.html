@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Key Events Demo</title>
+  </head>
+  <body>
+    <h1>Keyboard Events Demo</h1>
+
+    <div>
+      <input type="text" id="key-input" placeholder="Type something here..." />
+    </div>
+
+    <p id="keydown-msg"></p>
+    <p id="keyup-msg"></p>
+    <p id="keypress-msg"></p>
+
+    <script>
+      const keyInput = document.getElementById("key-input");
+      const keydownMsg = document.getElementById("keydown-msg");
+      const keyupMsg = document.getElementById("keyup-msg");
+      const keypressMsg = document.getElementById("keypress-msg");
+
+      // Keydown event
+      keyInput.addEventListener("keydown", (event) => {
+        keydownMsg.textContent = `Keydown: You pressed the "${event.key}" key.`;
+      });
+
+      // Keyup event
+      keyInput.addEventListener("keyup", (event) => {
+        keyupMsg.textContent = `Keyup: You released the "${event.key}" key.`;
+      });
+
+      // Keypress event (deprecated but shown for understanding)
+      keyInput.addEventListener("keypress", (event) => {
+        keypressMsg.textContent = `Keypress: You pressed the "${event.key}" key.`;
+      });
+    </script>
+  </body>
+</html>

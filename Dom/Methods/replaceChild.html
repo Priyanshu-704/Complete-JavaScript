@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>replaceChild method</title>
+  </head>
+  <body>
+    <div id="container">
+      <p id="oldChild">I will be replaced.</p>
+    </div>
+    <script>
+      const parent = document.getElementById("container");
+      const oldChild = document.getElementById("oldChild");
+      const newChild = document.createElement("p");
+      newChild.textContent = "I am the new child.";
+      parent.replaceChild(newChild, oldChild); // Replaces <p id="oldChild"> with new <p>
+    </script>
+  </body>
+</html>

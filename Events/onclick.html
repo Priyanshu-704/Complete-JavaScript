@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>onclick example</title>
+</head>
+<body>
+  <h1>HTML DOM Events</h1>
+<h2>The onclick Event</h2>
+
+<p>How to assign an "onclick" event to a p element:</p>
+
+<button id="demo" onclick="myFunction()">Click me</button>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = alert("YOU CLICKED ME!");
+}
+</script>
+</body>
+</html>

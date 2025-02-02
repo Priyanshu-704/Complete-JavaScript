@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mouse up event</title>
+  </head>
+  <body>
+    <div
+      id="mouseup-box"
+      style="width: 200px; height: 100px; background-color: lightgreen"
+    >
+      Release Mouse Here
+    </div>
+    <p id="mouseup-msg"></p>
+
+    <script>
+      const mouseUpBox = document.getElementById("mouseup-box");
+      const mouseUpMsg = document.getElementById("mouseup-msg");
+
+      mouseUpBox.addEventListener("mouseup", () => {
+        mouseUpMsg.textContent = "Mouse button released!";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>innerHTML property</title>
+</head>
+<body>
+  <div id="myDiv">Hello, <strong>World</strong>!</div>
+  <script>
+    const element = document.getElementById("myDiv");
+    console.log(element.innerHTML); // Outputs: Hello, <strong>World</strong>!
+    element.innerHTML = "<p>Updated Content</p>"; // Updates the content of the element
+    console.log(element.innerHTML); // Outputs: <p>Updated Content</p>
+  </script>
+</body>
+</html>

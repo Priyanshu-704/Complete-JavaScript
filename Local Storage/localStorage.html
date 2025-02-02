@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>json</title>
+</head>
+<body>
+  <!-- // Local Storage is a web storage mechanism that allows websites to store data in a user's web browser.-->
+   <!-- Don't save any tupe of sensitive information-->
+
+  <script>
+      let product = {
+      name :"tshirt",
+      price : 321,
+      rating : {
+        stars : 4.5,
+        reviews : 100,
+      },
+    };
+    localStorage.setItem('product',JSON.stringify(product));
+    localStorage.setItem('Name', 'Priyanshu');
+    localStorage.setItem('Price','8756');
+    //setItem(key, value): Stores a value associated with a key.If I comment the above two lines and then try to find the data from localstorage
+  console.log(localStorage.getItem('Name'));
+  
+    //getItem(key): Retrieves the value associated with a key.
+  </script>
+</body>
+</html>
