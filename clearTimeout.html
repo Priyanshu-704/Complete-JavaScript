@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout with clearTimeout</title>
+    <script>
+        let timeoutID;
+
+        // This function will be executed after 2 seconds if not cleared
+        function showMessage() {
+            document.getElementById('message').innerText = "This message appeared after 2 seconds!";
+        }
+
+        // Start the timer
+        function startTimer() {
+            timeoutID = setTimeout(showMessage, 2000);
+        }
+
+        // Clear the timeout before it executes
+        function cancelTimer() {
+            clearTimeout(timeoutID);
+            document.getElementById('message').innerText = "Timer has been canceled!";
+        }
+    </script>
+</head>
+<body>
+  <!-- This method is used to cancel a timeout that was set using setTimeout.
+It prevents the function from being executed if the timeout is cleared before it finishes. -->
+    <h1>setTimeout and clearTimeout Example</h1>
+    <button onclick="startTimer()">Start Timer</button>
+    <button onclick="cancelTimer()">Cancel Timer</button>
+    <p id="message"></p>  <!-- Message will appear here or be canceled -->
+</body>
+</html>

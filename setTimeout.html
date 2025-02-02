@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout Example</title>
+    <script>
+      
+        // This function will be executed after 2 seconds
+        function showMessage() {
+            document.getElementById('message').innerText = "Hello, this message appeared after 2 seconds!";
+        }
+
+        // Setting the timeout to call 'showMessage' after 2000ms (2 seconds)
+        function startTimer() {
+            setTimeout(showMessage, 2000);  // Delay of 2 seconds
+        }
+    </script>
+</head>
+<body>
+  <!-- This method is used to schedule a function to be executed after a specified delay (in milliseconds).
+It allows you to execute a piece of code or a callback function after a certain amount of time. -->
+    <h1>Welcome to the setTimeout Example</h1>
+    <button onclick="startTimer()">Click to Start Timer</button>
+    <p id="message"></p>  <!-- This is where the message will be displayed -->
+</body>
+</html>
